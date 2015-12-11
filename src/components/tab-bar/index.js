@@ -19,18 +19,33 @@ let tabConfig = [
     {
         text: '我的',
         icon: 'fa-user',
-        href: '#/user'
+        href: '#/self'
     }
 ]
 
 import './index.scss'
 
 export default class TabBar extends React.Component {
+    constructor (props) {
+        super(props)
+        this.state = {
+            active: props.active || '#/'
+        }
+    }
+
+    componentWillReceiveProps (props) {
+        this.setState({
+            active: props.active
+        })
+    }
+
     render () {
+
         let tabs = tabConfig.map((item, index) => {
+
             return (
-                <li>
-                    <a href={item.href}>
+                <li key={index}>
+                    <a href={item.href} className={classnames({active: item.href === this.state.active})}>
                         <i className={classnames('fa', item.icon)}></i>
                         <span>{item.text}</span>
                     </a>

@@ -7,13 +7,13 @@
 import React from 'react'
 import TabBar from '../components/tab-bar'
 
-export default class Home extends React.Component {
+export default class HomeComponent extends React.Component {
     render () {
         console.log(this.props)
 
         return (
             <div className="_namespace">
-                <TabBar tabs={this.props.tabs} />
+                <TabBar active="#/" />
             </div>
         )
     }
