@@ -24,6 +24,7 @@
     "flux": "^2.1.1",
     "font-awesome": "^4.5.0",
     "history": "^1.13.1",
+    "css-path-loader": "^0.2.10",
     "html-path-loader": "^0.1.10",
     "koa-static-cache": "^3.1.3",
     "react": "^0.14.3",
