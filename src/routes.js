@@ -9,7 +9,7 @@ import { Router, Route, IndexRoute } from 'react-router'
 import Home from './home'
 import BusinessComponent from './business'
 
-module.exports = (
+let routes = (
     <Router>
         <Route path="/"
                component={Home}></Route>
@@ -17,3 +17,5 @@ module.exports = (
                component={BusinessComponent}></Route>
     </Router>
 )
+
+export {routes}

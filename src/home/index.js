@@ -5,13 +5,16 @@
  */
 
 import React from 'react'
+import TabBar from '../components/tab-bar'
 
-class Home extends React.Component {
+export default class Home extends React.Component {
     render () {
+        console.log(this.props)
+
         return (
-            <div>helloworld555</div>
+            <div className="_namespace">
+                <TabBar tabs={this.props.tabs} />
+            </div>
         )
     }
 }
-
-module.exports = Home

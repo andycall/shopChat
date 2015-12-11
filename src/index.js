@@ -13,7 +13,7 @@ import './reset.scss'
 
 import { ReactRouter, Router } from 'react-router'
 
-import routes from './routes'
+import {routes} from './routes'
 
 // 设置页面缩放
 const WIDTH = 500
