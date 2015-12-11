@@ -6,7 +6,8 @@ class Home extends React.Component {
         return (
             <div>
                 <TitleBar></TitleBar>
-                123
+                <i className="fa fa-arrow-left"
+                   style={{marginRight:5}}></i>返回
             </div>
         )
     }
