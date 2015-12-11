@@ -4,12 +4,12 @@
  * @email dongtiancheng@baidu.com
  */
 
-let React = require('react')
+import React from 'react'
 
 class Home extends React.Component {
     render () {
         return (
-            <div>helloworld</div>
+            <div>helloworld555</div>
         )
     }
 }
