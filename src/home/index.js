@@ -5,13 +5,17 @@
  */
 
 let React = require('react')
+let TabBar = require('../components/tabbar')
 
-class Home extends React.Component {
+
+module.exports = React.createClass({
     render () {
+        console.log(this.props)
+
         return (
-            <div>helloworld</div>
+            <div className="_namespace">
+                <TabBar tabs={this.props.tabs} />
+            </div>
         )
     }
-}
-
-module.exports = Home
+})
