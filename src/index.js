@@ -22,6 +22,8 @@ const meta = document.createElement('meta')
 meta.setAttribute('name', 'viewport')
 meta.setAttribute('content', 'width=' + WIDTH + ',initial-scale=' + ratio + ',maximum-scale=' + ratio + ',minimum-scale=' + ratio + ',user-scalable=no,target-densitydpi=device-dpi,minimal-ui')
 document.getElementsByTagName('head')[0].appendChild(meta)
+document.getElementById('main').style.width = '500px'
+document.getElementById('main').style.margin = '0 auto'
 
 ReactDOM.render(
     routes,
