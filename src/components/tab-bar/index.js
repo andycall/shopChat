@@ -2,9 +2,8 @@
  * Created by andycall on 15/12/11.
  */
 
-let React = require('react')
-let classnames = require('classnames')
-
+import React from 'react'
+import classnames from 'classnames'
 
 let tabConfig = [
     {
@@ -22,7 +21,8 @@ let tabConfig = [
     }
 ]
 
-let tabBar = React.createClass({
+export default class TabBar extends React.Component {
+
     render () {
         let tabs = tabConfig.map((item, index) => {
             return (<li>
@@ -37,6 +37,4 @@ let tabBar = React.createClass({
             </div>
         )
     }
-})
-
-module.exports = tabBar
+}

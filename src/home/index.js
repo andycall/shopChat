@@ -4,10 +4,10 @@
  * @email dongtiancheng@baidu.com
  */
 
-import TabBar from '../components/tabbar'
 import React from 'react'
+import TabBar from '../components/tab-bar'
 
-module.exports = React.createClass({
+export default class Home extends React.Component {
     render () {
         console.log(this.props)
 
@@ -17,4 +17,4 @@ module.exports = React.createClass({
             </div>
         )
     }
-})
+}
