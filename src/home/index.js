@@ -4,9 +4,8 @@
  * @email dongtiancheng@baidu.com
  */
 
-let React = require('react')
-let TabBar = require('../components/tabbar')
-
+import TabBar from '../components/tabbar'
+import React from 'react'
 
 module.exports = React.createClass({
     render () {

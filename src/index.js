@@ -4,15 +4,24 @@
  * @email dongtiancheng@baidu.com
  */
 
-let React = require('react')
-let ReactDOM = require('react-dom')
+import React from 'react'
+import ReactDOM from 'react-dom'
 
 // font-awesome
-require('font-awesome/css/font-awesome.css')
+import 'font-awesome/css/font-awesome.css'
+import './reset.scss'
 
-let ReactRouter = require('react-router')
-let Router = ReactRouter.Router
-let routes = require('./routes')
+import { ReactRouter, Router } from 'react-router'
+
+import routes from './routes'
+
+// 设置页面缩放
+const WIDTH = 500
+const ratio = screen.width / WIDTH
+const meta = document.createElement('meta')
+meta.setAttribute('name', 'viewport')
+meta.setAttribute('content', 'width=' + WIDTH + ',initial-scale=' + ratio + ',maximum-scale=' + ratio + ',minimum-scale=' + ratio + ',user-scalable=no,target-densitydpi=device-dpi,minimal-ui')
+document.getElementsByTagName('head')[0].appendChild(meta)
 
 ReactDOM.render(
     routes,
