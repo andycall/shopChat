@@ -71,7 +71,7 @@ export default class BusinessComponent extends React.Component {
 
         return (
             <div className="_namespace">
-                <TitleBar title="群聊" return_url="#/business"></TitleBar>
+                <TitleBar title="正在与 卡哇伊 聊天" return_url="#/business"></TitleBar>
 
                 <div className="main-chat"
                      id="main-chat-content">{Messages}</div>

@@ -13,6 +13,10 @@ export default class BusinessComponent extends React.Component {
         }
     }
 
+    goChat () {
+        location.hash = '#/chat-group'
+    }
+
     onFocus () {
 
         let fansCount = this.state.fansCount + 1;
@@ -36,7 +40,7 @@ export default class BusinessComponent extends React.Component {
 
         return (
             <div className="_namespace">
-                <TitleBar title="棒棒糖 KTV"></TitleBar>
+                <TitleBar return_url="#/" title="棒棒糖 KTV"></TitleBar>
 
                 <div className="info-container">
                     <img src={BBT} className="avatar"/>
@@ -50,7 +54,7 @@ export default class BusinessComponent extends React.Component {
                 </div>
 
                 <div className="tab">
-                    <div className="item">
+                    <div className="item" onClick={this.goChat.bind(this)}>
                         进入群聊
                         <span className="brage">23</span>
                     </div>

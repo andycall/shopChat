@@ -10,6 +10,7 @@ import HomeComponent from './home'
 import BusinessComponent from './business'
 
 import ChartGroupComponent from './chartGroup'
+import ChatPersionComponent from './chatPersion'
 import FansComponent from './fans'
 import NearByComponent from './near-by'
 import SelfComponent from './self'
@@ -28,6 +29,8 @@ let routes = (
                component={BusinessComponent}></Route>
         <Route path="/chat-group"
                component={ChartGroupComponent}></Route>
+        <Route path="/chat-persion"
+               component={ChatPersionComponent}></Route>
         <Route path="/fans"
                component={FansComponent}></Route>
         <Route path="/self"

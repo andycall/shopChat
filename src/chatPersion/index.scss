@@ -1,0 +1,20 @@
+.input {
+  position: fixed;
+  left: auto;
+  bottom: 0;
+  width: 400px;
+  height: 30px;
+  border: 2px solid #ccc;
+}
+
+.submit-button {
+  position: fixed;
+  right: auto;
+  left: 400px;
+  bottom: 0;
+}
+
+.main-chat {
+  overflow-y: auto;
+  height: 500px;
+}
