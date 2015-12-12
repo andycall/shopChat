@@ -1,0 +1,26 @@
+& {
+  h2 {
+    margin: 15px 0;
+    font-size: 16px;
+  }
+
+  .chat-wrapper {
+    position: fixed;
+    bottom: 0;
+    width: 400px;
+    height: 50px;
+    line-height: 50px;
+
+    button {
+      width: 80%;
+      display: block;
+      line-height: 30px;
+      background: #ee5a44;
+      color: #fff;
+      border: 0;
+      margin: 0 auto;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+  }
+}

@@ -13,6 +13,7 @@ import ChartGroupComponent from './chartGroup'
 import FansComponent from './fans'
 import NearByComponent from './near-by'
 import SelfComponent from './self'
+import HomepageComponent from './homepage'
 
 let routes = (
     <Router>
@@ -28,6 +29,8 @@ let routes = (
                component={FansComponent}></Route>
         <Route path="/self"
                component={SelfComponent}></Route>
+        <Route path="/homepage"
+               component={HomepageComponent}></Route>
     </Router>
 )
 

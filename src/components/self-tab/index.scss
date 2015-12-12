@@ -1,3 +1,7 @@
+/**
+ * Created by andycall on 15/12/12.
+ */
+
 & {
   width: 92%;
   padding: 10px 15px;
@@ -5,7 +9,7 @@
   margin: 5px 0;
   background: whitesmoke;
   overflow: hidden;
-  
+
   .image_container {
     flex: 1;
   }
@@ -40,16 +44,13 @@
 
   .right {
     flex: 1;
+    display: flex;
 
-    p.number {
-      width: 50px;
+    .fa {
       display: inline-block;
-      background: #ee5a44;
-      color: #fff;
-      font-size: 14px;
-      text-align: center;
-      line-height: 30px;
-      border-radius: 15px;
+      margin: auto;
+      color: #ee5a44;
     }
+
   }
 }
