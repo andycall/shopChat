@@ -2,3 +2,8 @@
   $remSize: $size / 16;
   @return #{$remSize}rem;
 }
+
+@function pxCompare640($px) {
+  $remSize: $px / 640;
+  @return #{$remSize}rem;
+}

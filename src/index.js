@@ -6,7 +6,6 @@
 
 import React from 'react'
 import ReactDOM from 'react-dom'
-import RemLayout from 'rem-layout'
 
 // font-awesome
 import 'font-awesome/css/font-awesome.css'
@@ -16,7 +15,6 @@ import { ReactRouter, Router } from 'react-router'
 
 import {routes} from './routes'
 
-//RemLayout()
 
 // 设置页面缩放
 const WIDTH = 400
