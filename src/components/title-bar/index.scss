@@ -5,13 +5,18 @@
   display: flex;
   justify-content: center;
   position: relative;
-  height: 36px;
+  height: 25px;
+
+  span {
+    display: inline-block;
+    line-height: 25px;
+  }
 }
 
 .back {
   position: absolute;
   left: 5px;
-  top: 4px;
+  top: 5px;
   padding: 5px;
   background: #4C90CA;
   width: 80px;

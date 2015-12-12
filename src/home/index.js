@@ -6,30 +6,9 @@
 
 import React from 'react'
 import TabBar from '../components/tab-bar'
+import Shop from '../components/shop'
 
 import "./index.scss"
-
-export class ShopComponent extends React.Component {
-    render () {
-        return (
-            <div className="_namespace">
-                <div className="image_container">
-                    <img src="" alt=""/>
-                </div>
-                <div className="content">
-                    <h2>棒棒糖 TV</h2>
-                    <div className="status">
-                        <span>粉2000</span>
-                        <span>9折</span>
-                    </div>
-                </div>
-                <div className="right">
-                    <p>21人</p>
-                </div>
-            </div>
-        )
-    }
-}
 
 export default class HomeComponent extends React.Component {
     render () {
@@ -39,23 +18,21 @@ export default class HomeComponent extends React.Component {
                 <div className="nav">
                     <span>附近</span>
                     <form action="" className="search">
-
                         <div className="field">
-
                             <input type="text" className="input-search" id="input-search" name="input-search" required />
                             <label for="input-search">Search</label>
-
                         </div>
-
                     </form>
                 </div>
 
                 <div className="nearby">
                     <h4>附近商家</h4>
-                    <p>按距离</p>
+                    <p className="distance">按距离</p>
 
                     <ul>
-                        <ShopComponent />
+                        <Shop isNumber={true} />
+                        <Shop isNumber={true} />
+                        <Shop isNumber={true} />
                     </ul>
                 </div>
 
