@@ -36,35 +36,3 @@
     }
   }
 }
-
-.tab {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 15px;
-  .item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #999;
-    width: 120px;
-    height: 50px;
-    background-color: whitesmoke;
-    .brage {
-      margin-left: 5px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #9c3328;
-      color: white;
-      width: 25px;
-      height: 18px;
-      font-size: 12px;
-      border-radius: 10px;
-    }
-  }
-}
-
-.online-number {
-  color: #999;
-  font-size: 14px;
-}

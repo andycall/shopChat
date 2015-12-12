@@ -25,6 +25,7 @@ meta.setAttribute('content', 'width=' + WIDTH + ',initial-scale=' + ratio + ',ma
 document.getElementsByTagName('head')[0].appendChild(meta)
 document.getElementById('main').style.width = WIDTH + 'px'
 document.getElementById('main').style.margin = '0 auto'
+document.getElementById('main').style.position = 'relative'
 
 ReactDOM.render(
     routes,

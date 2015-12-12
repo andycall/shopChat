@@ -8,6 +8,9 @@ import { Router, Route, IndexRoute } from 'react-router'
 
 import HomeComponent from './home'
 import BusinessComponent from './business'
+
+import ChartGroupComponent from './chartGroup'
+import FansComponent from './fans'
 import NearByComponent from './near-by'
 import SelfComponent from './self'
 
@@ -19,6 +22,10 @@ let routes = (
                component={NearByComponent} ></Route>
         <Route path="/business"
                component={BusinessComponent}></Route>
+        <Route path="/chart-group"
+               component={ChartGroupComponent}></Route>
+        <Route path="/fans"
+               component={FansComponent}></Route>
         <Route path="/self"
                component={SelfComponent}></Route>
     </Router>
