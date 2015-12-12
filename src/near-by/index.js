@@ -7,6 +7,8 @@ import Shop from '../components/shop'
 
 import './index.scss'
 
+import MOCK_PERSON_DATA from '../mock'
+
 import Person from '../components/person'
 
 export default class NearByComponent extends React.Component {
@@ -15,12 +17,9 @@ export default class NearByComponent extends React.Component {
     }
 
     render () {
-        let shops = MOCK_HOME_DATA.map((item, index) => {
-            let rightButton = (
-                <p className="number"><i className="fa fa-comment"></i> {item.shop_people}人</p>
-            )
+        let shops = MOCK_PERSON_DATA.map((item, index) => {
             return (
-                <Shop key={index} {...item} rightButton={rightButton} ></Shop>
+                <Shop key={index} {...item}></Shop>
             )
         })
 
