@@ -16,7 +16,6 @@ export default class BusinessComponent extends React.Component {
     }
 
     onMessage(root, name, info, message) {
-        console.log(arguments)
         let newMessages = _.cloneDeep(this.state.messages)
         newMessages.push({
             name: name,
@@ -49,10 +48,10 @@ export default class BusinessComponent extends React.Component {
     render() {
         let Messages = this.state.messages.map((item)=> {
             if (item.name === this.state.name) {
-                return <Chart right
+                return <Chart left
                               content={item.message}/>
             } else {
-                return <Chart left
+                return <Chart right
                               content={item.message}/>
             }
         })
@@ -71,7 +70,7 @@ export default class BusinessComponent extends React.Component {
 
                 <Socket url="http://172.21.206.26:3000"/>
                 <Event name="chat"
-                       callback={ this.onMessage }/>
+                       callback={ this.onMessage.bind(this) }/>
             </div>
         )
     }

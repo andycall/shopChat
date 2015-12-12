@@ -25,14 +25,16 @@
     justify-content: center;
     align-items: center;
     width: 100px;
+
     .watch {
-      width: 100px;
+      width: 70px;
       height: 30px;
       line-height: 30px;
       text-align: center;
-      background: #01a0e4;
+      background: #ee5a44;
       border-radius: 5px;
       color: white;
+      cursor: pointer;
     }
   }
 }

@@ -8,28 +8,30 @@ import './index.scss'
 import pic from './QQ20151212-0.png'
 
 export default class ShopComponent extends React.Component {
+    onClick () {
+        location.hash = '#/business'
+    }
+
     render () {
-        let right = this.props.isNumber ?
-            <p className="number">111</p> :
-            <p className="button"></p>
-
-
         return (
-            <div className="_namespace">
+            <div className="_namespace" onClick={this.onClick}>
                 <div className="image_container">
-                    <img src={pic} alt=""/>
+                    <img src={this.props.shop_url} alt=""/>
                 </div>
                 <div className="content">
-                    <h2>棒棒糖 TV</h2>
+                    <div className="clearfix">
+                        <h2>{this.props.shop_name}</h2>
+                        <span className="distance">1823m</span>
+                    </div>
                     <div className="status">
                         <i className="fa fa-users"></i>
-                        <span>2000</span>
+                        <span>{this.props.shop_count}</span>
                         <i className="fa fa-ticket"></i>
-                        <span>9折</span>
+                        <span>{this.props.shop_discount}折</span>
                     </div>
                 </div>
                 <div className="right">
-                    {right}
+                    {this.props.rightButton}
                 </div>
             </div>
         )

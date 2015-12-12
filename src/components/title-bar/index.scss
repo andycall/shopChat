@@ -1,6 +1,6 @@
 & {
   padding: 10px 10px;
-  background: rgb(115, 170, 217);
+  background: #ee5a44;
   color: white;
   display: flex;
   justify-content: center;
@@ -17,8 +17,11 @@
   position: absolute;
   left: 5px;
   top: 5px;
-  padding: 5px;
-  background: #4C90CA;
-  width: 80px;
+  padding: 5px 20px 5px 10px;
   text-align: center;
+  cursor: pointer;
+
+  i {
+    font-size: 25px;
+  }
 }

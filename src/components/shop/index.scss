@@ -1,3 +1,12 @@
+.clearfix,
+.clearfix:after,
+.clearfix:before {
+  clear: both;
+  content: ' ';
+  overflow: hidden;
+
+}
+
 & {
   width: 92%;
   padding: 10px 15px;
@@ -5,21 +14,39 @@
   margin: 5px 0;
   background: whitesmoke;
   overflow: hidden;
+
+  &:hover {
+    cursor: pointer;
+  }
   
   .image_container {
-    flex: 1;
+    flex: 1.2;
+
+    img {
+      width: 80%;
+    }
   }
 
   .content {
     flex: 3;
     overflow: hidden;
+    position: relative;
 
     h2 {
+      float: left;
       margin: 0;
       line-height: 25px;
       padding-bottom: 10px;
       font-size: 16px;
       color: #888888;
+    }
+
+    .distance {
+      float: left;
+      font-size: 12px;
+      margin-left: 5px;
+      margin-top: 8px;
+      color: lighten(#888888, 10%);
     }
 
     .status {
@@ -39,17 +66,23 @@
   }
 
   .right {
-    flex: 1;
+    flex: 2;
+    display: flex;
 
     p.number {
-      width: 50px;
+      margin: auto;
+      width: 80px;
       display: inline-block;
       background: #ee5a44;
       color: #fff;
-      font-size: 14px;
+      font-size: 12px;
       text-align: center;
       line-height: 30px;
       border-radius: 15px;
+
+      i {
+        font-size: 14px;
+      }
     }
   }
 }
