@@ -5,11 +5,11 @@
   display: flex;
   justify-content: center;
   position: relative;
-  height: 25px;
+  height: 50px;
 
   span {
     display: inline-block;
-    line-height: 25px;
+    line-height: 35px;
   }
 }
 
@@ -22,6 +22,6 @@
   cursor: pointer;
 
   i {
-    font-size: 25px;
+    font-size: 30px;
   }
 }

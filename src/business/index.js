@@ -9,11 +9,12 @@ export default class BusinessComponent extends React.Component {
         super(props)
         this.state = {
             focused: this.props.focused,
-            fansCount: this.props.fansCount
+            fansCount: this.props.fansCount || 123
         }
     }
 
     onFocus () {
+
         let fansCount = this.state.fansCount + 1;
 
         this.setState({
@@ -23,18 +24,19 @@ export default class BusinessComponent extends React.Component {
     }
 
     render() {
+
         let focus
 
         if (this.state.focused) {
-            focus = <p>已关注</p>
+            focus = <p className="focusd">已关注</p>
         }
         else {
-            focus = <div onClick={this.onFocus} className="watch">关注</div>
+            focus = <div onClick={this.onFocus.bind(this)} className="watch">关注</div>
         }
 
         return (
             <div className="_namespace">
-                <TitleBar></TitleBar>
+                <TitleBar title="棒棒糖 KTV"></TitleBar>
 
                 <div className="info-container">
                     <img src={BBT} className="avatar"/>
