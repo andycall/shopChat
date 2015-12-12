@@ -9,6 +9,7 @@ export default class TitleBar extends React.Component {
                     <i className="fa fa-arrow-left"
                        style={{marginRight:5}}></i>返回
                 </div>
+                {this.props.title}
             </div>
         )
     }

@@ -2,9 +2,16 @@
   padding: 10px 10px;
   background: rgb(115, 170, 217);
   color: white;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 36px;
 }
 
 .back {
+  position: absolute;
+  left: 5px;
+  top: 4px;
   padding: 5px;
   background: #4C90CA;
   width: 80px;
