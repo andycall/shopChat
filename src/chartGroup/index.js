@@ -58,7 +58,7 @@ export default class BusinessComponent extends React.Component {
 
         return (
             <div className="_namespace">
-                <TitleBar title="正在和卡哇伊聊天中"></TitleBar>
+                <TitleBar return_url="#/business" title="正在和卡哇伊聊天中"></TitleBar>
 
                 {Messages}
 

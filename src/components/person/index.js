@@ -14,18 +14,18 @@ export default class ShopComponent extends React.Component {
         return (
             <div className="_namespace" onClick={this.onClick}>
                 <div className="image_container">
-                    <img src={this.props.shop_url} alt=""/>
+                    <img src={this.props.person_url} alt=""/>
                 </div>
                 <div className="content">
                     <div className="clearfix">
-                        <h2>{this.props.shop_name}</h2>
-                        <span className="distance">{this.props.shop_distance}m</span>
+                        <h2>{this.props.person_name}</h2>
+                        <span className="distance">{this.props.person_distance}m</span>
                     </div>
                     <div className="status">
                         <i className="fa fa-users"></i>
-                        <span>{this.props.shop_count}</span>
+                        <span>{this.props.person_age}岁</span>
                         <i className="fa fa-ticket"></i>
-                        <span>{this.props.shop_discount}折</span>
+                        <span>{this.props.person_height}cm</span>
                     </div>
                 </div>
                 <div className="right">
