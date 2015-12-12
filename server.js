@@ -1,29 +1,25 @@
-/**
- * @author dongtiancheng
- * @date 15/12/7.
- * @email dongtiancheng@baidu.com
- */
-
 "use strict"
 
-let koa = require('koa')
-let app = koa()
+var koa = require('koa')
+var app = koa()
 
+// 设置静态资源缓存
 var staticCache = require('koa-static-cache')
-
 app.use(staticCache('output', {
-    prefix: './output',
-    maxAge: 60 * 60 * 24,
+    prefix: '/output',
+    maxAge: 365 * 24 * 60 * 60,
     buffer: true,
     gzip: true,
     usePrecompiledGzip: true
 }))
 
-app.on('error', (err) => {
-    log.error('server error', err);
-});
+// 监听错误
+app.on("error", function (err) {
+    console.log('服务错误', err)
+})
 
-process.on('uncaughtException', (err) => {
+// 抓住未捕获的错误
+process.on('uncaughtException', function (err) {
     console.error('未捕获错误', err)
 
     //打印出错误
@@ -33,11 +29,11 @@ process.on('uncaughtException', (err) => {
     console.log(err.stack)
 })
 
-var templateHtml = require('fs').readFileSync('./index.html')
-
+// 入口文件
+var templateHtml = require('./html.js')
 app.use(function *() {
     this.type = 'text/html; charset=utf-8'
     this.body = templateHtml
 })
 
-app.listen(8080)
+module.exports = app.listen(8080)
