@@ -40,6 +40,7 @@ export default class BusinessComponent extends React.Component {
 
     handleSubmit(e) {
         if (e.keyCode !== 13)return
+        if (this.state.text === '')return
 
         Socket.socket().emit('room', 'bbt', this.state.text)
         this.setState({
@@ -52,7 +53,7 @@ export default class BusinessComponent extends React.Component {
         Socket.socket().emit('join', 'bbt')
 
         let $dom = $('#main-chat-content')
-        $('#main-chat-content').height($(document).height()-82)
+        $('#main-chat-content').height($(document).height() - 82)
     }
 
     render() {
@@ -70,7 +71,7 @@ export default class BusinessComponent extends React.Component {
 
         return (
             <div className="_namespace">
-                <TitleBar title="正在和卡哇伊聊天中"></TitleBar>
+                <TitleBar title="群聊"></TitleBar>
 
                 <div className="main-chat"
                      id="main-chat-content">{Messages}</div>
