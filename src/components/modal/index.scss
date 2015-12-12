@@ -1,0 +1,50 @@
+& {
+  position: absolute;
+  width: 280px;
+  height: 135px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 100;
+  text-align: center;
+  background: rgb(245, 245, 245);
+  border: 1px solid rgb(199, 199, 199);
+  border-radius: 8px;
+
+  h2, p {
+    color: rgb(144, 144, 144);
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: normal;
+  }
+
+  .button {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .cancel, .go {
+      padding: 15px;
+      margin: 0 15px;
+      border-radius: 5px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .cancel {
+      flex: 1;
+      color: #888;
+    }
+
+    .go {
+      flex: 1;
+      background: #ee5a44;
+      color: #fff;
+    }
+  }
+}

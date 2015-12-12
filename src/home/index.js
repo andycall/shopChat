@@ -7,6 +7,7 @@
 import React from 'react'
 import TabBar from '../components/tab-bar'
 import Shop from '../components/shop'
+import Modal from '../components/modal'
 
 import "./index.scss"
 
@@ -45,6 +46,7 @@ export default class HomeComponent extends React.Component {
                     </ul>
                 </div>
 
+                <Modal title="提示" content="你正在棒棒糖 KTV" />
 
                 <TabBar active="#/" />
             </div>
