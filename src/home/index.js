@@ -31,7 +31,7 @@ export default class HomeComponent extends React.Component {
                     <form action="" className="search">
                         <div className="field">
                             <input type="text" className="input-search" id="input-search" name="input-search" required />
-                            <label for="input-search">Search</label>
+                            <label for="input-search">搜商家</label>
                         </div>
                     </form>
                 </div>

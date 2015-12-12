@@ -24,9 +24,10 @@ export default class SelfComponent extends React.Component {
                 </div>
 
                 <div className="tabs">
-                    <TabComponent />
+                    <TabComponent order_name="我的订单" orders="11" />
+                    <TabComponent order_name="我关注的商家" orders="5" />
+                    <TabComponent order_name="我的优惠券" orders="18" />
                 </div>
-
                 <TabBar active="#/self"></TabBar>
             </div>
         )

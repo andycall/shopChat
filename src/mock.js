@@ -8,7 +8,7 @@ import STARTBUCKS from './components/shop/starbucks.png'
 import BBT from './components/shop/bbt.png'
 
 import KWY from './components/person/kawayi.png'
-import JALON from './components/person/jalon.jpg'
+import GIRL from './components/person/girl2.png'
 
 let MOCK_HOME_DATA = [
     {
@@ -46,11 +46,11 @@ let MOCK_PERSON_DATA = [
         person_url: KWY
     },
     {
-        person_name: 'Jalon',
+        person_name: 'Andycall',
         person_distance: 120,
         person_age: 23,
-        person_height: 178,
-        person_url: JALON
+        person_height: 168,
+        person_url: GIRL
     }
 ]
 

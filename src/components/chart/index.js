@@ -23,8 +23,8 @@ export default class TitleBar extends React.Component {
                          className="content">
                         {this.props.content}
                     </div>
-                    <div style={imgStyle}
-                         className="img"></div>
+                    <img style={imgStyle}
+                         className="img" src={this.props.url} />
                 </div>
             </div>
         )

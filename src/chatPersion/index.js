@@ -7,6 +7,9 @@ import _ from 'lodash'
 import $ from 'jquery'
 import './index.scss'
 
+import jalon from '../components/person/jalon.jpg'
+import KWY from '../components/person/kawayi.png'
+
 export default class BusinessComponent extends React.Component {
     constructor(props) {
         super(props)
@@ -60,18 +63,20 @@ export default class BusinessComponent extends React.Component {
         let Messages = this.state.messages.map((item, index)=> {
             if (item.name === this.state.name) {
                 return <Chart key={index}
+                              url={jalon}
                               left
                               content={item.message}/>
             } else {
                 return <Chart key={index}
                               right
+                              url={KWY}
                               content={item.message}/>
             }
         })
 
         return (
             <div className="_namespace">
-                <TitleBar title="正在与 卡哇伊 聊天" return_url="#/business"></TitleBar>
+                <TitleBar title="正在与 卡哇伊 聊天" return_url="#/nearby"></TitleBar>
 
                 <div className="main-chat"
                      id="main-chat-content">{Messages}</div>
@@ -81,7 +86,7 @@ export default class BusinessComponent extends React.Component {
                        onChange={this.handleInputChange.bind(this)}
                        onKeyDown={this.handleSubmit.bind(this)}/>
 
-                <Socket url="http://172.21.206.26:3000"/>
+                <Socket url="http://fedev.baidu.com:8003" />
                 <Event name="chat"
                        callback={ this.onMessage.bind(this) }/>
             </div>

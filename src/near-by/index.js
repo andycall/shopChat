@@ -3,11 +3,10 @@
  */
 import React from 'react'
 import TabBar from '../components/tab-bar'
-import Shop from '../components/shop'
 
 import './index.scss'
 
-import MOCK_PERSON_DATA from '../mock'
+import { MOCK_PERSON_DATA } from '../mock'
 
 import Person from '../components/person'
 
@@ -17,9 +16,9 @@ export default class NearByComponent extends React.Component {
     }
 
     render () {
-        let shops = MOCK_PERSON_DATA.map((item, index) => {
+        let persons = MOCK_PERSON_DATA.map((item, index) => {
             return (
-                <Shop key={index} {...item}></Shop>
+                <Person key={index} {...item}></Person>
             )
         })
 
@@ -29,8 +28,8 @@ export default class NearByComponent extends React.Component {
                     <h2>附近</h2>
                 </div>
 
-                <ul>
-                    {shops}
+                <ul className="person-list">
+                    {persons}
                 </ul>
 
                 <TabBar active="#/nearby" />

@@ -3,11 +3,11 @@
  */
 
 & {
-  width: 92%;
+  width: 100%;
   padding: 10px 15px;
+  margin: 15px 0;
   display: flex;
-  margin: 5px 0;
-  background: whitesmoke;
+  background: #fff;
   overflow: hidden;
 
   .image_container {
@@ -50,6 +50,7 @@
       display: inline-block;
       margin: auto;
       color: #ee5a44;
+      font-size: 25px;
     }
 
   }

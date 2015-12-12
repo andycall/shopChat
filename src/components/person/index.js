@@ -5,9 +5,9 @@ import React from 'react'
 
 import './index.scss'
 
-export default class ShopComponent extends React.Component {
+export default class PersonComponent extends React.Component {
     onClick () {
-        location.hash = '#/business'
+        location.hash = '#/chat-person'
     }
 
     render () {
@@ -29,7 +29,7 @@ export default class ShopComponent extends React.Component {
                     </div>
                 </div>
                 <div className="right">
-                    {this.props.rightButton}
+                    <button class="chat">聊天</button>
                 </div>
             </div>
         )

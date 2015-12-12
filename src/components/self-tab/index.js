@@ -5,16 +5,16 @@ import React from 'react'
 
 import './index.scss'
 
-import pic from './QQ20151212-0.png'
+import jalon from '../person/jalon.jpg'
 
 export default class SelfTabComponent extends React.Component {
     render () {
-        let right = <i className="fa fa-arrow-right"></i>
+        let right = <i className="fa fa-angle-right"></i>
 
         return (
             <div className="_namespace">
                 <div className="image_container">
-                    <img src={pic} alt=""/>
+                    <img src={jalon} alt=""/>
                 </div>
                 <div className="content">
                     <h2>Jalon</h2>

@@ -20,8 +20,6 @@ let routes = (
     <Router>
         <Route path="/"
                component={HomeComponent}>
-
-
         </Route>
         <Route path="/nearby"
                component={NearByComponent}></Route>
@@ -29,7 +27,7 @@ let routes = (
                component={BusinessComponent}></Route>
         <Route path="/chat-group"
                component={ChartGroupComponent}></Route>
-        <Route path="/chat-persion"
+        <Route path="/chat-person"
                component={ChatPersionComponent}></Route>
         <Route path="/fans"
                component={FansComponent}></Route>

@@ -7,6 +7,20 @@ import _ from 'lodash'
 import $ from 'jquery'
 import './index.scss'
 
+import jalon from '../components/person/jalon.jpg'
+
+import KWY from '../components/person/kawayi.png'
+
+import girl1 from '../components/person/girl1.png'
+import girl2 from '../components/person/girl2.png'
+import girl3 from '../components/person/girl3.png'
+
+let girMap = {
+    girl1: girl1,
+    girl2: girl2,
+    girl3: girl3
+}
+
 export default class BusinessComponent extends React.Component {
     constructor(props) {
         super(props)
@@ -19,9 +33,12 @@ export default class BusinessComponent extends React.Component {
 
     onMessage(root, name, info, message) {
         let newMessages = _.cloneDeep(this.state.messages)
+        let random = Math.random() + 0.00001
+
         newMessages.push({
             name: name,
-            message: message
+            message: message,
+            url: girMap['girl' + Math.ceil(random * 3)]
         })
 
         this.setState({
@@ -61,10 +78,12 @@ export default class BusinessComponent extends React.Component {
             if (item.name === this.state.name) {
                 return <Chart key={index}
                               left
+                              url={jalon}
                               content={item.message}/>
             } else {
                 return <Chart key={index}
                               right
+                              url={item.url}
                               content={item.message}/>
             }
         })
@@ -81,7 +100,7 @@ export default class BusinessComponent extends React.Component {
                        onChange={this.handleInputChange.bind(this)}
                        onKeyDown={this.handleSubmit.bind(this)}/>
 
-                <Socket url="http://172.21.206.26:3000"/>
+                <Socket url="http://fedev.baidu.com:8003"/>
                 <Event name="chat"
                        callback={ this.onMessage.bind(this) }/>
             </div>

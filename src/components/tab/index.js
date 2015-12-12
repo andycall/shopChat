@@ -13,7 +13,7 @@ import pic from './QQ20151212-0.png'
 
 export default class TabComponent extends React.Component {
     render () {
-        let right = <i className="fa fa-arrow-right"></i>
+        let right = <i className="fa fa-angle-right"></i>
 
         return (
             <div className="_namespace">
@@ -21,8 +21,8 @@ export default class TabComponent extends React.Component {
                     <img src={pic} alt=""/>
                 </div>
                 <div className="content">
-                    <h2>我的订单</h2>
-                    <span>123</span>
+                    <h2>{this.props.order_name}</h2>
+                    <span>{this.props.orders}</span>
                 </div>
                 <div className="right">
                     {right}
