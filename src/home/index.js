@@ -19,21 +19,21 @@ let MOCK_HOME_DATA = [
         shop_name: '棒棒糖 KTV',
         shop_count: '9213',
         shop_discount: '8.5',
-        shop_url: KFC,
+        shop_url: BBT,
         shop_people: 82
     },
     {
         shop_name: 'KFC',
         shop_count: '7783',
         shop_discount: '9.5',
-        shop_url: STARTBUCKS,
+        shop_url: KFC,
         shop_people: 22,
     },
     {
         shop_name: 'Starbucks',
         shop_count: '2321',
         shop_discount: '9',
-        shop_url: BBT,
+        shop_url: STARTBUCKS,
         shop_people: 13
     }
 ]

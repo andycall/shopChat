@@ -4,7 +4,7 @@
  * @email dongtiancheng@baidu.com
  */
 import React from 'react'
-import { Router, Route, IndexRoute } from 'react-router'
+import { Router, Route, IndexRoute, Redirect } from 'react-router'
 
 import HomeComponent from './home'
 import BusinessComponent from './business'
@@ -18,9 +18,12 @@ import HomepageComponent from './homepage'
 let routes = (
     <Router>
         <Route path="/"
-               component={HomeComponent}></Route>
+               component={HomeComponent}>
+
+
+        </Route>
         <Route path="/nearby"
-               component={NearByComponent} ></Route>
+               component={NearByComponent}></Route>
         <Route path="/business"
                component={BusinessComponent}></Route>
         <Route path="/chat-group"

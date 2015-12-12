@@ -2,20 +2,48 @@ import React from 'react'
 import TitleBar from '../components/title-bar'
 import './index.scss'
 
+import BBT from '../components/shop/bbt.png'
+
 export default class BusinessComponent extends React.Component {
+    constructor (props) {
+        super(props)
+        this.state = {
+            focused: this.props.focused,
+            fansCount: this.props.fansCount
+        }
+    }
+
+    onFocus () {
+        let fansCount = this.state.fansCount + 1;
+
+        this.setState({
+            focused: true,
+            fansCount: fansCount
+        })
+    }
+
     render() {
+        let focus
+
+        if (this.state.focused) {
+            focus = <p>已关注</p>
+        }
+        else {
+            focus = <div onClick={this.onFocus} className="watch">关注</div>
+        }
+
         return (
             <div className="_namespace">
                 <TitleBar></TitleBar>
 
                 <div className="info-container">
-                    <img className="avatar"/>
+                    <img src={BBT} className="avatar"/>
                     <div className="center">
                         <div className="title">棒棒糖KTV</div>
-                        <div>粉丝 2335</div>
+                        <div>粉丝 {this.state.fansCount}</div>
                     </div>
                     <div className="right">
-                        <div className="watch">关注</div>
+                        {focus}
                     </div>
                 </div>
 
